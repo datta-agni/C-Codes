@@ -25,11 +25,10 @@ int duplicate_element(int arr[], int num) {
     temp[j++] = arr[num - 1];
 
     // check the original array's elements with temporary array's elements
-    for (i = 0; i < j; i++) {
-        arr[i] = temp[i];
-    }
+    for (i = 0; i < j; i++) arr[i] = temp[i];
+}
 
-    return j;
+return j;
 }
 
 int main() {
@@ -41,22 +40,16 @@ int main() {
 
     printf(" Enter the elements : ");
     // use loop to read elements one by one
-    for (i = 0; i < num; i++) {
-        scanf(" %d", &arr[i]);
-    }
+    for (i = 0; i < num; i++) scanf(" %d", &arr[i]);
 
     printf(" \n Elements before removing duplicates : ");
-    for (i = 0; i < num; i++) {
-        printf(" %d", arr[i]);
-    }
+    for (i = 0; i < num; i++) printf(" %d", arr[i]);
 
     num = duplicate_element(arr, num);
 
     // print array after removing duplicates elements
     printf(" \n Display array's elements after removing duplicates : ");
-    for (i = 0; i < num; i++) {
-        printf(" %d", arr[i]);
-    }
+    for (i = 0; i < num; i++) printf(" %d", arr[i]);
 
     return 0;
 }
