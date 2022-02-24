@@ -2,7 +2,11 @@
 #include <stdio.h>
 
 int main() {
-  int clrscr();
-  printf("Hello World!!");
-  int getch();
+    int clrscr();
+
+    printf("Hello World!!");
+
+    int getch();
+
+    return 0;
 }

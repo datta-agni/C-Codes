@@ -2,16 +2,18 @@
 #include <stdio.h>
 
 int main() {
-  int n;
-  int clrscr();
+    int n;
+    int clrscr();
 
-  printf("Enter number:");
-  scanf("%d", &n);
+    printf("Enter number:");
+    scanf("%d", &n);
 
-  if (n % 2 == 0)
-    printf("Number is even");
-  else
-    printf("Number is odd");
+    if (n % 2 == 0)
+        printf("Number is even");
+    else
+        printf("Number is odd");
 
-  int getch();
+    int getch();
+
+    return 0;
 }

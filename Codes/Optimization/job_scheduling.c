@@ -1,54 +1,57 @@
 #include <stdio.h>
 
 int main() {
-  int bt[20], p[20], wt[20], tat[20], i, j, n, total = 0, pos, temp;
-  float avg_wt, avg_tat;
-  printf("Enter number of process:");
-  scanf("%d", &n);
+    int bt[20], p[20], wt[20], tat[20], i, j, n, total = 0, pos, temp;
+    float avg_wt, avg_tat;
+    printf("Enter number of process:");
+    scanf("%d", &n);
 
-  printf("nEnter Burst Time:n");
-  for (i = 0; i < n; i++) {
-    printf("p%d:", i + 1);
-    scanf("%d", &bt[i]);
-    p[i] = i + 1;
-  }
-
-  // sorting of burst times
-  for (i = 0; i < n; i++) {
-    pos = i;
-    for (j = i + 1; j < n; j++) {
-      if (bt[j] < bt[pos]) pos = j;
+    printf("nEnter Burst Time:n");
+    for (i = 0; i < n; i++) {
+        printf("p%d:", i + 1);
+        scanf("%d", &bt[i]);
+        p[i] = i + 1;
     }
 
-    temp = bt[i];
-    bt[i] = bt[pos];
-    bt[pos] = temp;
+    // sorting of burst times
+    for (i = 0; i < n; i++) {
+        pos = i;
+        for (j = i + 1; j < n; j++) {
+            if (bt[j] < bt[pos]) pos = j;
+        }
 
-    temp = p[i];
-    p[i] = p[pos];
-    p[pos] = temp;
-  }
+        temp    = bt[i];
+        bt[i]   = bt[pos];
+        bt[pos] = temp;
 
-  wt[0] = 0;
+        temp   = p[i];
+        p[i]   = p[pos];
+        p[pos] = temp;
+    }
 
-  for (i = 1; i < n; i++) {
-    wt[i] = 0;
-    for (j = 0; j < i; j++) wt[i] += bt[j];
+    wt[0] = 0;
 
-    total += wt[i];
-  }
+    for (i = 1; i < n; i++) {
+        wt[i] = 0;
+        for (j = 0; j < i; j++) wt[i] += bt[j];
 
-  avg_wt = (float)total / n;
-  total = 0;
+        total += wt[i];
+    }
 
-  printf("nProcesst    Burst Time    tWaiting TimetTurnaround Time");
-  for (i = 0; i < n; i++) {
-    tat[i] = bt[i] + wt[i];
-    total += tat[i];
-    printf("np%dtt  %dtt    %dttt%d", p[i], bt[i], wt[i], tat[i]);
-  }
+    avg_wt = (float)total / n;
+    total  = 0;
 
-  avg_tat = (float)total / n;
-  printf("nnAverage Waiting Time=%f", avg_wt);
-  printf("nAverage Turnaround Time=%fn", avg_tat);
+    printf("nProcesst    Burst Time    tWaiting TimetTurnaround Time");
+    for (i = 0; i < n; i++) {
+        tat[i] = bt[i] + wt[i];
+        total += tat[i];
+        printf("np%dtt  %dtt    %dttt%d", p[i], bt[i], wt[i], tat[i]);
+    }
+
+    avg_tat = (float)total / n;
+
+    printf("nnAverage Waiting Time=%f", avg_wt);
+    printf("nAverage Turnaround Time=%fn", avg_tat);
+
+    return 0;
 }

@@ -2,16 +2,18 @@
 #include <stdio.h>
 
 int main() {
-  int n, sqr, cube;
-  int clrscr();
+    int n, sqr, cube;
+    int clrscr();
 
-  printf("Enter Number: ");
-  scanf("%d", &n);
+    printf("Enter Number: ");
+    scanf("%d", &n);
 
-  sqr = n * n;
-  cube = n * n * n;
+    sqr  = n * n;
+    cube = n * n * n;
 
-  printf("\nSquare: %d\nCube: %d", sqr, cube);
+    printf("\nSquare: %d\nCube: %d", sqr, cube);
 
-  int getch();
+    int getch();
+
+    return 0;
 }

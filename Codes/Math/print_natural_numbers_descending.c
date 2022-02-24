@@ -2,18 +2,20 @@
 #include <stdio.h>
 
 int main() {
-  int i = 1, n;
-  int clrscr();
+    int i = 1, n;
+    int clrscr();
 
-  printf("Enter n : ");
-  scanf("%d", &n);
+    printf("Enter n : ");
+    scanf("%d", &n);
 
-  i = n;
+    i = n;
 
-  do {
-    printf("%d\t", i);
-    i--;
-  } while (i >= 1);
+    do {
+        printf("%d\t", i);
+        i--;
+    } while (i >= 1);
 
-  int getch();
+    int getch();
+
+    return 0;
 }
