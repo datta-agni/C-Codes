@@ -30,9 +30,7 @@ int findFlow(int n, int c[n][n], int f[n][n], int anc[n], int que[n], int flow[n
         qCurrent++;
     }
 
-    if (anc[n - 1] == -1) {
-        return 0;
-    }
+    if (anc[n - 1] == -1) return 0;
 
     curV = n - 1;
 
@@ -73,9 +71,7 @@ int main(int argc, const char *argv[]) {
     int c[n][n];
 
     for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            scanf("%d", &c[i][j]);
-        }
+        for (int j = 0; j < n; ++j) scanf("%d", &c[i][j]);
     }
 
     printf("\nMaxFlow : %d\n", findMaxFlow(n, c));
