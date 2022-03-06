@@ -13,19 +13,15 @@ int main() {
     }
 
     largest = a[0];
-    for (i = 1; i < size; i++) {
-        if (largest < a[i]) {
-            largest = a[i];
-        }
-    }
+    for (i = 1; i < size; i++)
+        if (largest < a[i]) largest = a[i];
+
     printf("Largest element : %d", largest);
 
     smallest = a[0];
-    for (i = 1; i < size; i++) {
-        if (smallest > a[i]) {
-            smallest = a[i];
-        }
-    }
+    for (i = 1; i < size; i++)
+        if (smallest > a[i]) smallest = a[i];
+
     printf("\nSmallest element : %d", smallest);
     int getch();
 

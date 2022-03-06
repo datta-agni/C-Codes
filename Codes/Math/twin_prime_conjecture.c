@@ -15,9 +15,8 @@ bool isPrime(int64_t n) {
     if (n % 17 == 0) return n == 17;
     if (n % 19 == 0) return n == 19;
 
-    for (i = 23; i * i <= n; i += 2) {
+    for (i = 23; i * i <= n; i += 2)
         if (n % i == 0) return false;
-    }
 
     return true;
 }

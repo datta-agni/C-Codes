@@ -23,18 +23,16 @@ int main(int argc, char *argv[]) {
     struct TreeNode *node =
         (struct TreeNode *)malloc(MAXSIZE * sizeof(struct TreeNode));
 
-    for (d = 0; d < MAXSIZE; d++) {
-        node[d].data = 0;
-    }
+    for (d = 0; d < MAXSIZE; d++) node[d].data = 0;
 
     if (argc < 2) {
         int i = 0;
         int j = MAXSIZE;
 
         printf("Please type %d digitals here, each number a line\n", j);
-        for (i = 0; i < MAXSIZE; i++) {
-            scanf("%d", &node[i].data);
-        }
+
+        for (i = 0; i < MAXSIZE; i++) scanf("%d", &node[i].data);
+
         n = MAXSIZE;
     } else if (argc == 2) {
         int c    = 0;

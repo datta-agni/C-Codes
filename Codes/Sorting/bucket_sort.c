@@ -25,9 +25,7 @@ void BucketSort(int arr[]) {
     buckets = (struct Node **)malloc(sizeof(struct Node *) * NBUCKET);
 
     // Initialize empty buckets
-    for (i = 0; i < NBUCKET; ++i) {
-        buckets[i] = NULL;
-    }
+    for (i = 0; i < NBUCKET; ++i) buckets[i] = NULL;
 
     // Fill the buckets with respective elements
     for (i = 0; i < NARRAY; ++i) {
@@ -47,9 +45,7 @@ void BucketSort(int arr[]) {
     }
 
     // Sort the elements of each bucket
-    for (i = 0; i < NBUCKET; ++i) {
-        buckets[i] = InsertionSort(buckets[i]);
-    }
+    for (i = 0; i < NBUCKET; ++i) buckets[i] = InsertionSort(buckets[i]);
 
     printf("-------------\n");
     printf("Buckets after sorting\n");
@@ -75,9 +71,8 @@ void BucketSort(int arr[]) {
 // Function to sort the elements of each bucket
 struct Node *InsertionSort(struct Node *list) {
     struct Node *k, *nodeList;
-    if (list == 0 || list->next == 0) {
+    if (list == 0 || list->next == 0)
         return list;
-    }
 
     nodeList       = list;
     k              = list->next;
@@ -93,9 +88,8 @@ struct Node *InsertionSort(struct Node *list) {
             continue;
         }
 
-        for (ptr = nodeList; ptr->next != 0; ptr = ptr->next) {
+        for (ptr = nodeList; ptr->next != 0; ptr = ptr->next)
             if (ptr->next->data > k->data) break;
-        }
 
         if (ptr->next != 0) {
             struct Node *tmp;
@@ -118,9 +112,8 @@ int getBucketIndex(int value) { return value / INTERVAL; }
 
 void print(int ar[]) {
     int i;
-    for (i = 0; i < NARRAY; ++i) {
-        printf("%d ", ar[i]);
-    }
+    for (i = 0; i < NARRAY; ++i) printf("%d ", ar[i]);
+
     printf("\n");
 }
 

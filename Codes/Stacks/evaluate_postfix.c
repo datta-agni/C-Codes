@@ -9,12 +9,11 @@ float array[25];
 
 void push(float x) {
     // printf("%c\t",x);
-    if (top == 24) {
+    if (top == 24)
         printf("Stack overflow");
-    } else {
+    else
         array[++top] = x;
-        // printf("%d ",array[top]);
-    }
+    // printf("%d ",array[top]);
 }
 
 float pop() {

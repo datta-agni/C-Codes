@@ -39,12 +39,10 @@ modulo(long long base, long long exponent, long long mod) {
 int Miller(long long p, int iteration) {
     int i;
     long long s;
-    if (p < 2) {
+    if (p < 2)
         return 0;
-    }
-    if (p != 2 && p % 2 == 0) {
+    if (p != 2 && p % 2 == 0)
         return 0;
-    }
     s = p - 1;
     while (s % 2 == 0) {
         s /= 2;

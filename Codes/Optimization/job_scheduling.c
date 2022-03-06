@@ -16,9 +16,8 @@ int main() {
     // sorting of burst times
     for (i = 0; i < n; i++) {
         pos = i;
-        for (j = i + 1; j < n; j++) {
+        for (j = i + 1; j < n; j++)
             if (bt[j] < bt[pos]) pos = j;
-        }
 
         temp    = bt[i];
         bt[i]   = bt[pos];
@@ -34,7 +33,6 @@ int main() {
     for (i = 1; i < n; i++) {
         wt[i] = 0;
         for (j = 0; j < i; j++) wt[i] += bt[j];
-
         total += wt[i];
     }
 

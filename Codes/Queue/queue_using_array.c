@@ -19,20 +19,17 @@ int pop() {
         printf("already empty");
 
     else {
-        if (front == rear) {
+        if (front == rear)
             front = rear = -1;
-        } else {
+        else
             item = queue[front];
-            front++;
-        }
+        front++;
     }
     return item;
 }
 
 void display() {
-    for (int i = front; i <= rear; i++) {
-        printf("%d ", queue[i]);
-    }
+    for (int i = front; i <= rear; i++) printf("%d ", queue[i]);
 }
 
 int main() {

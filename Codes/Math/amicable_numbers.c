@@ -3,15 +3,13 @@
 // check function
 int check(int a, int b) {
     int s = 0, i;
-    for (i = 1; i < a; i++) {
+    for (i = 1; i < a; i++)
         if (a % i == 0) s = s + i;
-    }
 
     if (s == b) {
         s = 0;
-        for (i = 1; i < b; i++) {
+        for (i = 1; i < b; i++)
             if (b % i == 0) s = s + i;
-        }
 
         if (s == a)
             return 1;
