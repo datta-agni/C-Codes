@@ -15,9 +15,7 @@ void push(int x) {
 }
 
 void pop() {
-    if (start == NULL) {
-        printf("stack is already empty\n");
-    }
+    if (start == NULL) printf("Stack is already empty\n");
     struct stack *temp = (struct stack *)malloc(sizeof(struct stack));
     temp               = start;
     printf("The popped element is %d\n", temp->data);

@@ -29,11 +29,10 @@ int main() {
     // use for loop to print the max iteration
     for (iter_cnt = 0; iter_cnt < mx_iter_cnt; mid_pt = root) {
         // check initial num * mid_pt is less than 0
-        if (get_fun(int_st) * get_fun(mid_pt) < 0) {
+        if (get_fun(int_st) * get_fun(mid_pt) < 0)
             int_end = mid_pt;  // assign the mid_pt to int_end
-        } else {
+        else
             int_st = mid_pt;  // else it assign the mid_pt to int_st
-        }
 
         bisect(&root, int_st, int_end, &iter_cnt);  // get the address
         if (fabs(root - mid_pt) < err_all) {

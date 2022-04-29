@@ -6,11 +6,11 @@ int main() {
     char hexadecimal[10];
     char hex[10];
     long int binary = 0;
+    int rem         = 0;
+    int position    = 1;
+    int len         = 0;
+    int k           = 0;
     int octal;
-    int rem      = 0;
-    int position = 1;
-    int len      = 0;
-    int k        = 0;
 
     printf("Enter a octal number : ");
     scanf("%d", &octal);
@@ -87,9 +87,7 @@ int main() {
     hex[len] = '\0';
     printf("\nThe hexadecimal number is : ");
 
-    for (int i = 0; hex[i] != '\0'; i++) {
-        printf("%c", hex[i]);
-    }
+    for (int i = 0; hex[i] != '\0'; i++) printf("%c", hex[i]);
 
     return 0;
 }

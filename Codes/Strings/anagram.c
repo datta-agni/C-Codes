@@ -22,8 +22,7 @@ int main() {
     if (count == 1)
         printf(" %s and %s strings are an anagram of each other. \n", arr1, arr2);
     else
-        printf(" %s and %s strings are not an anagram of each other. \n", arr1,
-               arr2);
+        printf(" %s and %s strings are not an anagram of each other. \n", arr1, arr2);
 
     return 0;
 }

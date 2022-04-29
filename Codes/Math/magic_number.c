@@ -28,9 +28,7 @@ int main() {
     }
 
     printf(" \n The reverse of the digits = %d", rev);
-
-    printf(" \n The product of %d * %d = %d", sum_of_digits, rev,
-           rev * sum_of_digits);
+    printf(" \n The product of %d * %d = %d", sum_of_digits, rev, rev * sum_of_digits);
     // use if else statement to check the magic number
     if (rev * sum_of_digits == n)
         printf(" \n %d is a Magic Number. ", n);

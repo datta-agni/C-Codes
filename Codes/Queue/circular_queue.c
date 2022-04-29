@@ -26,18 +26,17 @@ int pop() {
     else {
         item = queue[front];
 
-        if (front == rear) {
+        if (front == rear)
             front = rear = -1;
-        } else
+        else
             front = (front + 1) % maxsize;
     }
     return item;
 }
 
 void display() {
-    if (front == -1) {
+    if (front == -1)
         printf("Queue empty");
-    }
 
     else {
         i = 0;

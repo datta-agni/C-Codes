@@ -15,9 +15,8 @@ bool isPrime(int64_t n) {
     if (n % 17 == 0) return n == 17;
     if (n % 19 == 0) return n == 19;
 
-    for (i = 23; i * i <= n; i += 2) {
+    for (i = 23; i * i <= n; i += 2)
         if (n % i == 0) return false;
-    }
 
     return true;
 }
@@ -46,16 +45,9 @@ void test(int limit) {
 }
 
 int main() {
-    test(10);
-    test(100);
-    test(1000);
-    test(10000);
-    test(100000);
-    test(1000000);
-    test(10000000);
-    test(100000000);
-    test(1000000000);
-    test(10000000000);
-
+    int a;
+    printf("Enter the limit : ");
+    scanf("%d", &a);
+    test(a);
     return 0;
 }

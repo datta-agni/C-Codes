@@ -8,11 +8,11 @@
 #define mod(n, m) ((((n) % (m)) + (m)) % (m))
 
 int is_prime(unsigned int n) {
-    if (n <= 3) {
+    if (n <= 3)
         return n > 1;
-    } else if (!(n % 2) || !(n % 3)) {
+    else if (!(n % 2) || !(n % 3))
         return 0;
-    } else {
+    else {
         unsigned int i;
         for (i = 5; i * i <= n; i += 6)
             if (!(n % i) || !(n % (i + 2))) return 0;

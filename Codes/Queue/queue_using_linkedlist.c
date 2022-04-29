@@ -12,20 +12,20 @@ void push(int x) {
     struct queue *temp   = start;
     insert->data         = x;
     insert->next         = NULL;
-    if (start == NULL) {
+
+    if (start == NULL)
         start = insert;
-    }
-    while (temp->next != NULL) {
+
+    while (temp->next != NULL)
         temp = temp->next;
-    }
+
     temp->next = insert;
     free(temp);
 }
 
 void pop() {
-    if (start == NULL) {
+    if (start == NULL)
         printf("queue is already empty\n");
-    }
     struct queue *temp = (struct queue *)malloc(sizeof(struct queue));
     temp               = start;
     printf("The popped element is %d\n", temp->data);
@@ -37,9 +37,8 @@ void display() {
     struct queue *temp = (struct queue *)malloc(sizeof(struct queue));
     temp               = start;
 
-    while (temp->next != NULL) {
-        printf("%d ", temp->data);
-    }
+    while (temp->next != NULL) printf("%d ", temp->data);
+
     printf("%d ", temp->data);
     free(temp);
 }

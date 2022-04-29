@@ -10,9 +10,8 @@ int main() {
     end = n - 1;
 
     printf("Enter elements in ascending order\n");
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
+    for (i = 0; i < n; i++) scanf("%d", &arr[i]);
+
     printf("Enter the element to be searched\n");
     scanf("%d", &ele);
 
@@ -25,17 +24,14 @@ int main() {
             break;
         }
 
-        else if (arr[mid] < ele) {
+        else if (arr[mid] < ele)
             beg = mid + 1;
-        }
 
-        else {
+        else
             end = mid - 1;
-        }
     }
-    if (flag == 0) {
+    if (flag == 0)
         printf("Element not found\n");
-    }
 
     return 0;
 }

@@ -13,9 +13,9 @@ void countingSort(int array[], int size, int place) {
     int output[size + 1];
     int max = (array[0] / place) % 10;
 
-    for (int i = 1; i < size; i++) {
+    for (int i = 1; i < size; i++)
         if (((array[i] / place) % 10) > max) max = array[i];
-    }
+
     int count[max + 1];
 
     for (int i = 0; i < max; ++i) count[i] = 0;
@@ -40,15 +40,12 @@ void radixsort(int array[], int size) {
     // Get maximum element
     int max = getMax(array, size);
     // Apply counting sort to sort elements based on place value.
-    for (int place = 1; max / place > 0; place *= 10)
-        countingSort(array, size, place);
+    for (int place = 1; max / place > 0; place *= 10) countingSort(array, size, place);
 }
 
 // Print an array
 void printArray(int array[], int size) {
-    for (int i = 0; i < size; ++i) {
-        printf("%d  ", array[i]);
-    }
+    for (int i = 0; i < size; ++i) printf("%d  ", array[i]);
     printf("\n");
 }
 

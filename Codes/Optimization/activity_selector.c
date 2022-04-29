@@ -23,9 +23,7 @@ int greedy_activity_selection(int s[], int f[], int activity[], int n) {
     int i = 0, count = 0, prev = 0;
     while (i < n) {
         if (s[i] >= prev) {
-            while (f[i] == f[i + 1]) {
-                i++;
-            }
+            while (f[i] == f[i + 1]) i++;
             printf("activity number: %d\n", activity[i]);
             count++;
             prev = f[i];
