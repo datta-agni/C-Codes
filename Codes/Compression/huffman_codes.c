@@ -21,8 +21,7 @@ int englishLetterFrequencies[27] = {81, 15, 28, 43, 128, 23, 20, 61, 71,
  * @brief finds and returns the small sub-tree in the forrest
  */
 int findSmaller(Node *array[], int differentFrom) {
-    int smaller;
-    int i = 0;
+    int smaller, i = 0;
 
     while (array[i]->value == -1) i++;
     smaller = i;
@@ -129,7 +128,7 @@ void compressFile(FILE *input, FILE *output, int codeTable[]) {
     /*print details of compression on the screen*/
     fprintf(stderr, "Original bits = %dn", originalBits * 8);
     fprintf(stderr, "Compressed bits = %dn", compressedBits);
-    fprintf(stderr, "Saved %.2f%% of memoryn",
+    fprintf(stderr, "Saved %.2f%% of memory",
             ((float)compressedBits / (originalBits * 8)) * 100);
 
     return;
